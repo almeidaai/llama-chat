@@ -45,31 +45,31 @@ function CTA({ shortenedModelName }) {
   if (shortenedModelName == "Llava") {
     return (
       <a
-        href="https://replicate.com/blog/run-llama-2-with-an-api?utm_source=project&utm_campaign=llama2ai"
+        href="https://tapestry.co.jp"
         target="_blank"
         className="underline"
       >
-        Run and fine-tune Llava in the cloud.
+        Run and fine-tune Any Model in the cloud.
       </a>
     );
   } else if (shortenedModelName == "Salmonn") {
     return (
       <a
-        href="https://replicate.com/blog/run-llama-2-with-an-api?utm_source=project&utm_campaign=llama2ai"
+        href="https://tapestry.co.jp"
         target="_blank"
         className="underline"
       >
-        Run and fine-tune Salmonn in the cloud.
+        Run and fine-tune any model in the cloud.
       </a>
     );
   } else {
     return (
       <a
-        href="https://replicate.com/blog/run-llama-2-with-an-api?utm_source=project&utm_campaign=llama2ai"
+        href="https://tapestry.co.jp"
         target="_blank"
         className="underline"
       >
-        Run and fine-tune Llama 2 in the cloud.
+        Run and fine-tune any model in the cloud.
       </a>
     );
   }
@@ -216,7 +216,7 @@ export default function HomePage() {
   return (
     <>
       <div className="bg-slate-100 border-b-2 text-center p-3">
-        Powered by Replicate. <CTA shortenedModelName={size.shortened} />
+        Powered by TapestryAI . <CTA shortenedModelName={size.shortened} />
       </div>
       <nav className="grid grid-cols-2 pt-3 pl-6 pr-3 sm:grid-cols-3 sm:pl-0">
         <div className="hidden sm:inline-block"></div>
@@ -224,9 +224,9 @@ export default function HomePage() {
           {size.shortened == "Llava"
             ? "🌋"
             : size.shortened == "Salmonn"
-            ? "🐟"
-            : "🦙"}{" "}
-          <span className="hidden sm:inline-block">Chat with</span>{" "}
+              ? "🐟"
+              : "🦙"}{" "}
+          <span className="hidden sm:inline-block">Current Model: </span>{" "}
           <button
             className="py-2 font-semibold text-gray-500 hover:underline"
             onClick={() => setOpen(true)}
@@ -237,16 +237,6 @@ export default function HomePage() {
           </button>
         </div>
         <div className="flex justify-end">
-          <a
-            className="inline-flex items-center px-3 py-2 mr-3 text-sm font-semibold text-gray-700 bg-white rounded-md shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-            href="https://github.com/replicate/chat"
-          >
-            <CodeBracketIcon
-              className="w-5 h-5 text-gray-500 sm:mr-2 group-hover:text-gray-900"
-              aria-hidden="true"
-            />{" "}
-            <span className="hidden sm:inline">Clone on GitHub</span>
-          </a>
           <button
             type="button"
             className="inline-flex items-center px-3 py-2 text-sm font-semibold text-gray-900 bg-white rounded-md shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
